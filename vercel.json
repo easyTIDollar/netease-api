@@ -1,5 +1,6 @@
 {
-  "version": 2,
+  "version": 2,3
+  "installCommand": "npm install",
   "builds": [
     {
       "src": "./index.js",
