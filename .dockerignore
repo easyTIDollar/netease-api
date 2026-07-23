@@ -7,6 +7,7 @@
 !/app.js
 !/server.js
 !/package.json
+!/pnpm-workspace.yaml
 !/index.js
 !/generateConfig.js
 !/main.js

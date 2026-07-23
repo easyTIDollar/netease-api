@@ -1298,11 +1298,11 @@ tags: 歌单标签
 
 **必选参数 :** `id` : 音乐 id
 
-**可选参数 :** `source`: 选择要解灰的音源, 不支持多音源
+**可选参数 :** `source`: 选择要解灰的音源, 支持使用英文逗号分隔多个音源, 例如 `pyncmd,bodian,kuwo,kugou`
 
 **接口地址 :** `/song/url/match`
 
-**调用例子 :** `/song/url/match?id=1969519579` `/song/url/match?id=1969519579`
+**调用例子 :** `/song/url/match?id=1969519579` `/song/url/match?id=1969519579&source=pyncmd,bodian,kuwo,kugou`
 
 ### 搜索
 

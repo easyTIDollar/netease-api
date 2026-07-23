@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+if (process.platform === 'win32') {
+  try {
+    // Keep Node's UTF-8 output readable in cmd.exe and legacy PowerShell.
+    require('child_process').execFileSync('chcp.com', ['65001'], {
+      stdio: 'ignore',
+    })
+  } catch (_) {
+    // A detached process may not have a console, so startup should continue.
+  }
+}
+
 const fs = require('fs')
 const path = require('path')
 const tmpPath = require('os').tmpdir()

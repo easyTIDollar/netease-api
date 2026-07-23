@@ -1,15 +1,14 @@
-FROM node:lts-alpine
+FROM node:20-alpine
 
 RUN apk add --no-cache tini
 
-ENV NODE_ENV production
-USER node
+ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY --chown=node:node . ./
+COPY . ./
 
-RUN yarn --network-timeout=100000
+RUN corepack enable && corepack prepare pnpm@10 --activate && pnpm i --frozen-lockfile
 
 EXPOSE 3000
 
