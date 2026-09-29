@@ -7,6 +7,9 @@
       "use": "@vercel/node"
     }
   ],
+  "regions": [
+    "hkg1"
+  ],
   "routes": [
     {
       "src": "/(.*)",
